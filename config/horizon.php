@@ -165,7 +165,7 @@ return [
     */
 
     'defaults' => [
-        'supervisor-1' => [
+        'supervisor-worker1' => [
             'connection' => 'redis',
             'queue' => ['computations', 'data-processing'],
             'balance' => 'auto',
@@ -181,7 +181,7 @@ return [
 
     'environments' => [
         'production' => [
-            'supervisor-1' => [
+            'supervisor-worker1' => [
                 'maxProcesses' => 10,
                 'balanceMaxShift' => 1,
                 'balanceCooldown' => 3,
@@ -189,7 +189,7 @@ return [
         ],
 
         'local' => [
-            'supervisor-1' => [
+            'supervisor-worker1' => [
                 'maxProcesses' => 3,
             ],
         ],
